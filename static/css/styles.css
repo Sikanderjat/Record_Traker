@@ -1,0 +1,231 @@
+/* static/css/styles.css */
+
+/* Reset and mobile-first base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16px; /* Base font size for mobile */
+    line-height: 1.5;
+    padding: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    width: 100%;
+    max-width: 100%; /* Prevent overflow on mobile */
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.payment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.payment-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 10px;
+    font-size: 0.95rem; /* Slightly smaller for mobile */
+}
+
+.serial-number {
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity {
+    color: #333;
+}
+
+.total-sales {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.nav-links {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px; /* Larger tap target */
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.nav-links:hover {
+    color: #0056b3;
+}
+
+.nav-links.delete {
+    color: #dc3545;
+}
+
+.nav-links.delete:hover {
+    color: #a71d2a;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Align buttons to right */
+}
+
+form {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px; /* Larger for touch */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-messages {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.error-messages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.no-data {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Tablet (600px and up) */
+@media (min-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        width: 90%;
+        max-width: 600px;
+    }
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+    .payment-list li {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        font-size: 1rem;
+    }
+    .serial-number {
+        width: 50px;
+    }
+    .quantity {
+        width: 80px;
+    }
+    .total-sales {
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+    form {
+        padding: 20px;
+    }
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop (768px and up) */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+    }
+    h2, h3 {
+        font-size: 2rem;
+    }
+    .payment-list li {
+        padding: 15px;
+    }
+    .total-sales {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+    .nav-links {
+        padding: 5px;
+    }
+    .form-control {
+        padding: 8px;
+    }
+}
